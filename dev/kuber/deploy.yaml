@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: kuber-app
-        image: bakavets/kuber:v1.0
+        image: dromix/test_application:0.0.1
         ports:
-        - containerPort: 8000
+        - containerPort: 3000
