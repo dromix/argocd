@@ -14,8 +14,9 @@ spec:
       labels:
         app: http-server
     spec:
-      nodeSelector:
-        kubernetes.io/arch: arm
+      tolerations:
+      - key: "node-role.kubernetes.io/master"
+        effect: "NoSchedule"
       containers:
       - name: kuber-app
         image: bakavets/kuber:v1.0
